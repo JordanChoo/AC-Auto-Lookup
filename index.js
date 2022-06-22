@@ -27,6 +27,10 @@ module.exports = {
         };
 
         let acAutoResults = await axios.request(axiosConfig);
+
+        let acAutomation = _.findWhere(acAutoResults.automations, {id: req.query.acId})
+
+        return res.status(200).json({name: acAutomation.name, status: 200});
     }
 
 }
