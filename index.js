@@ -4,7 +4,8 @@ const axios = require('axios');
 
 // Import ENV vars
 const kgKey = process.env.kgKey || null;
-const acUrl = process.env.acUrl || null
+const acUrl = process.env.acUrl || null;
+const acApiToken = process.env.acApiToken || null;
 
 module.exports = {
 
