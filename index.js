@@ -15,6 +15,17 @@ module.exports = {
         if(req.query.kgKey != kgKey) return res.status(401).send('Not authorized');
         // Check to see if it is a GET Req
         if(req.method != 'GET') return res.status(401).send('Not authorized');
+
+        // Config the API Req
+        var axiosConfig = {
+            method: 'get',
+            url: `${acUrl}/api/3/automations?limit=100`,
+            headers: { 
+              'Api-Token': acApiToken, 
+            }
+        };
+
+        let acAutoResults = await axios.request(axiosConfig);
     }
 
 }
