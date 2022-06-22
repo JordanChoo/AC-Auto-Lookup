@@ -9,7 +9,11 @@ const acUrl = process.env.acUrl || null
 module.exports = {
 
     AutoLookup: async (req, res) => {
-
+        // Validate request
+        // Make sure that the kgKey matches the env kgKey
+        if(req.query.kgKey != kgKey) return res.status(401).send('Not authorized');
+        // Check to see if it is a GET Req
+        if(req.method != 'GET') return res.status(401).send('Not authorized');
     }
 
 }
