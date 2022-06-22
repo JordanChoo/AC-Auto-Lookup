@@ -32,7 +32,7 @@ module.exports = {
         let acAutoResults = await axios.request(axiosConfig);
 
         // Find the matching automation data
-        let acAutomation = _.findWhere(acAutoResults.automations, {id: req.query.acId})
+        let acAutomation = _.findWhere(acAutoResults.data.automations, {id: req.query.acId})
 
         // Return data
         return res.status(200).json({acAutomation, status: 200});
