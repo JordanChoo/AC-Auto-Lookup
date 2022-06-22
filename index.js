@@ -33,7 +33,7 @@ module.exports = {
         let acAutomation = _.findWhere(acAutoResults.automations, {id: req.query.acId})
 
         // Return data
-        return res.status(200).json({name: acAutomation.name, status: 200});
+        return res.status(200).json({acAutomation, status: 200});
     }
 
 }
