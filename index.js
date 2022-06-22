@@ -10,7 +10,7 @@ const acApiToken = process.env.acApiToken || null;
 
 module.exports = {
 
-    AutoLookup: async (req, res) => {
+    autoLookup: async (req, res) => {
         // Validate request
         // Make sure that the kgKey matches the env kgKey
         if(req.query.kgKey != kgKey) return res.status(401).send('Not authorized');
