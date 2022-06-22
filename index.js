@@ -1,6 +1,7 @@
 // Import NPM Pkgs
 require('dotenv').config();
 const axios = require('axios');
+const _ = require('underscore');
 
 // Import ENV vars
 const kgKey = process.env.kgKey || null;
